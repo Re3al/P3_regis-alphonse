@@ -1,0 +1,16 @@
+@mixin background-grey($percent) {
+    background-color: lighten($color-bg, $percent);
+}
+
+
+@mixin desktop-version {
+    @media screen and (min-width: map-get($breakpoints, desktop)){@content;}}
+
+
+    //en attente de test sur sass   
+@mixin card-shadow{
+        box-shadow: 2px 2px 10px #acacac;
+      }
+      
+
+      

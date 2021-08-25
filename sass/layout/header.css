@@ -1,0 +1,10 @@
+header {
+  width: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: 10px 5px 5px #dfdfdf;
+          box-shadow: 10px 5px 5px #dfdfdf;
+  padding: 20px 0px;
+  text-align: center;
+  position: relative;
+}
+/*# sourceMappingURL=header.css.map */

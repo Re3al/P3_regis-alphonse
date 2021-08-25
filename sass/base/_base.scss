@@ -1,0 +1,236 @@
+body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+i {
+  display: block;
+}
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ececec;
+  padding: 20px;
+  font-weight: 600;
+}
+.location i{
+  margin-right: 20px;
+}
+.booking {
+  position: relative;
+  text-align: center;
+  @include background-grey(79%);
+  padding: 30px;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  margin: 40px auto;
+}
+.fonctionnement_step {
+  margin-bottom: 13px;
+}
+.fonctionnement_step > p {
+  position: absolute;
+}
+.fonctionnement_step div {
+    /* display: flex; */
+    width: 80%;
+    text-align: center;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: #efefef;
+    margin: auto;
+    border-radius: 22px;
+    position: relative;
+    padding: 30px 0px;
+    font-weight: 700;
+    margin: 4px auto;
+  @extend .flex-center;
+  @include background-grey(78%);
+  @include card-shadow;
+  &:hover 
+    {
+      i{
+        color: #a85ddb;
+      }
+      
+    }
+
+}
+.fonctionnement_step div i {
+  margin-right: 20px;
+  color: #828080;
+}
+
+.fonctionnement_step_number {
+  position: absolute;
+  left: -8%;
+  padding: 5px 11px;
+  border-radius: 23px;
+  background: #a85ddb;
+  font-size: 17px;
+  color: white;
+}
+section {
+  text-align: center;
+}
+
+.menu-card {
+  width: 90%;
+  display: flex;
+  margin: 20px auto;
+  flex-direction: column;
+  box-shadow: 2px 2px 10px #acacac;
+  border-radius: 20px;
+}
+.menu-card {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  text-align: left;
+}
+
+.menu-card img {
+  border-radius: 20px;
+  height: 225px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.menu-card__information {
+  display: flex;
+  justify-content: space-between;
+  width: 92%;
+  margin: 10px auto;
+}
+.menu-card__information .heart-container {
+  position: relative;
+  & .fas {
+    background: #fff;
+    background: linear-gradient(to top, #a85ddb, #e671da);
+    -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent; 
+    opacity: 0; 
+    font-size: 16px; 
+    &:hover
+    {
+      animation: fade-heart 0.75s ease forwards alternate;
+      &:hover + .far
+      {
+        opacity: 0;
+      }
+    }
+
+  }
+}
+.menu-card__information .heart-container  .far:hover
+{
+  opacity: 0;
+
+}
+.menu-card__information .heart-container i {
+  position: absolute;
+  right: 7px;
+}
+@keyframes fade-heart
+{
+  0% {
+    opacity: 0;
+    
+}
+100% {
+    opacity: 1;
+ 
+}
+}
+.menu-card h4,
+.menu-card p {
+  margin: 0;
+}
+.new {
+  position: absolute;
+  background-color: #99e2d0;
+  width: 40%;
+  padding: 12px;
+  color: #43524e;
+  top: 20px;
+  right: 10px;
+  border-radius: 5px;
+  @include card-shadow;
+}
+.restaurants {
+  @include background-grey(79%);
+  padding: 30px 0;
+}
+
+
+h4,
+p {
+  margin: 0px;
+}
+
+@media (min-width: 500px) AND (max-width: 10240px) {
+  .fonctionnement_step {
+    left: -2%;
+  }
+  .restaurants {
+    background-color: white;
+    padding: 30px 0;
+    display: flex;
+    width: 90%;
+    margin: auto;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .fonctionnement {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 30px auto;
+  }
+  .fonctionnement_step {
+    margin-bottom: 13px;
+    width: 325px;
+    left: -2%;
+  }
+  
+  .menu-card {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    width: 30%;
+    margin: 20px 50px;
+  }
+  .restaurants {
+    background-color: white;
+    padding: 30px 0;
+    display: flex;
+    width: 90%;
+    margin: auto;
+  }
+  
+  .restaurants > div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin: auto;
+    padding: 40px;
+  }
+}
