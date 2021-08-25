@@ -1,0 +1,22 @@
+{
+  "name": "projetgit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Re3al/P3_regis-alphonse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/Re3al/P3_regis-alphonse.git/issues"
+  },
+  "homepage": "https://github.com/Re3al/P3_regis-alphonse.git#readme"
+}
