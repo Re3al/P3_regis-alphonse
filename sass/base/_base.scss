@@ -20,7 +20,7 @@ i {
   padding: 20px;
   font-weight: 600;
 }
-.location i{
+.location i {
   margin-right: 20px;
 }
 .booking {
@@ -34,6 +34,9 @@ i {
   display: flex;
   flex-direction: column;
   margin: 40px auto;
+  @include desktop-version {
+    flex-direction: column;
+  }
 }
 .fonctionnement_step {
   margin-bottom: 13px;
@@ -42,29 +45,26 @@ i {
   position: absolute;
 }
 .fonctionnement_step div {
-    /* display: flex; */
-    width: 80%;
-    text-align: center;
-    /* justify-content: center; */
-    align-items: center;
-    background-color: #efefef;
-    margin: auto;
-    border-radius: 22px;
-    position: relative;
-    padding: 30px 0px;
-    font-weight: 700;
-    margin: 4px auto;
+  /* display: flex; */
+  width: 80%;
+  text-align: center;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: #efefef;
+  margin: auto;
+  border-radius: 22px;
+  position: relative;
+  padding: 30px 0px;
+  font-weight: 700;
+  margin: 4px auto;
   @extend .flex-center;
   @include background-grey(78%);
   @include card-shadow;
-  &:hover 
-    {
-      i{
-        color: #a85ddb;
-      }
-      
+  &:hover {
+    i {
+      color: #a85ddb;
     }
-
+  }
 }
 .fonctionnement_step div i {
   margin-right: 20px;
@@ -118,39 +118,31 @@ section {
     background: #fff;
     background: linear-gradient(to top, #a85ddb, #e671da);
     -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent; 
-    opacity: 0; 
-    font-size: 16px; 
-    &:hover
-    {
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    font-size: 16px;
+    &:hover {
       animation: fade-heart 0.75s ease forwards alternate;
-      &:hover + .far
-      {
+      &:hover + .far {
         opacity: 0;
       }
     }
-
   }
 }
-.menu-card__information .heart-container  .far:hover
-{
+.menu-card__information .heart-container .far:hover {
   opacity: 0;
-
 }
 .menu-card__information .heart-container i {
   position: absolute;
   right: 7px;
 }
-@keyframes fade-heart
-{
+@keyframes fade-heart {
   0% {
     opacity: 0;
-    
-}
-100% {
+  }
+  100% {
     opacity: 1;
- 
-}
+  }
 }
 .menu-card h4,
 .menu-card p {
@@ -171,14 +163,13 @@ section {
   @include background-grey(79%);
   padding: 30px 0;
 }
-
-
 h4,
 p {
   margin: 0px;
 }
 
-@media (min-width: 500px) AND (max-width: 10240px) {
+/*
+@media (min-width: 500px) AND (max-width: 1024px) {
   .fonctionnement_step {
     left: -2%;
   }
@@ -189,9 +180,9 @@ p {
     width: 90%;
     margin: auto;
   }
-  
 }
-@media (min-width: 1024px) {
+*/
+@media (min-width: 1025px) {
   .fonctionnement {
     display: flex;
     flex-direction: row;
@@ -203,7 +194,7 @@ p {
     width: 325px;
     left: -2%;
   }
-  
+
   .menu-card {
     display: flex;
     justify-content: space-around;
@@ -215,15 +206,16 @@ p {
     background-color: white;
     padding: 30px 0;
     display: flex;
+    justify-content: center;
     width: 90%;
     margin: auto;
   }
-  
+
   .restaurants > div {
     display: flex;
     flex-wrap: wrap;
     width: 80%;
-    margin: auto;
+    justify-content: center;
   }
   ul {
     list-style-type: none;

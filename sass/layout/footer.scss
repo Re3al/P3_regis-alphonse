@@ -1,13 +1,11 @@
 footer img{
     width: 90px;
 }
-
 footer{
     @include background-grey(5%);
     color: white;
     padding: 20px;
 }
-
 footer ul{
     list-style-type: none;
     display: block;
@@ -32,6 +30,12 @@ footer ul li{
         };
     }
 
+    @media (min-width: 768px) {
+        footer ul {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
 @media (min-width: 1024px) {
     footer {
         padding: 20px;
