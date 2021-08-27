@@ -149,14 +149,16 @@ section {
   margin: 0;
 }
 .new {
-  position: absolute;
-  background-color: #99e2d0;
-  width: 40%;
-  padding: 12px;
-  color: #43524e;
-  top: 20px;
-  right: 10px;
-  border-radius: 5px;
+    position: absolute;
+    background-color: #99e2d0;
+    width: 40%;
+    padding: 12px;
+    color: #43524e;
+    top: 20px;
+    right: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
   @include card-shadow;
 }
 .restaurants {
