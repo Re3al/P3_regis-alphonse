@@ -61,6 +61,9 @@ i {
   @include background-grey(78%);
   @include card-shadow;
   &:hover {
+    
+    @include light-main-color(35%);
+    cursor: pointer;
     i {
       color: #a85ddb;
     }
@@ -97,6 +100,9 @@ section {
   justify-content: space-around;
   position: relative;
   text-align: left;
+  &:hover{
+    cursor: pointer;
+  }
 }
 
 .menu-card img {
@@ -112,7 +118,7 @@ section {
   width: 92%;
   margin: 10px auto;
 }
-.menu-card__information .heart-container {
+ .heart-container {
   position: relative;
   & .fas {
     background: #fff;
@@ -120,19 +126,25 @@ section {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 0;
-    font-size: 16px;
+    font-size: 20px;
+    cursor: pointer;
     &:hover {
-      animation: fade-heart 0.75s ease forwards alternate;
-      &:hover + .far {
-        opacity: 0;
-      }
+      animation: fade-heart 1s ease forwards alternate;
+      cursor: pointer;
+      
     }
+  }
+  &:hover > .far {
+    opacity: 0;
+  }
+  & .far{
+    font-size: 20px;
   }
 }
 .menu-card__information .heart-container .far:hover {
   opacity: 0;
 }
-.menu-card__information .heart-container i {
+ .heart-container i {
   position: absolute;
   right: 7px;
 }
